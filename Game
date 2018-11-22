@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class Game {
+
+     
+    private final COMPlayer COM;
+    private final HUMPlayer HUM;
+    private boolean GAME_BREAK = false;
+    Scanner scanner = new Scanner(System.in);
+    
+    public Game(COMPlayer COM, HUMPlayer HUM){
+        this.COM = COM;
+        this.HUM = HUM;
+    }
+    
+    public void run(){
+        
+        Match match = new Match(COM,HUM);
+        
+
+        
+        while (GAME_BREAK == false){
+            
+            match.playMatch();
+            System.out.println("");
+            System.out.println("-----------");
+            System.out.println("PLAY AGAIN? (Y/N)");
+            
+            String input = scanner.next();
+            if(input.equals("Y")){
+                
+            }else if (input.equals("N")){
+                System.out.println("GOODBYE!");
+                GAME_BREAK = true;
+                System.out.println("....");
+                System.out.println("...");
+                System.out.println("..");
+            }else {
+                System.out.println("WRONG INPUT.");
+            }
+            
+        }
+        
+        
+        
+    }
+ 
+        
+    }
+    
