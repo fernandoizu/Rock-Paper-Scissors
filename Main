@@ -1,0 +1,17 @@
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        COMPlayer COM = new COMPlayer();
+        HUMPlayer HUM = new HUMPlayer();
+        
+        Game game = new Game(COM, HUM);
+        
+        game.run();
+      
+       
+        
+    }
+    
+}
