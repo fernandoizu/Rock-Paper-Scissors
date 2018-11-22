@@ -1,0 +1,26 @@
+import java.util.Random;
+
+class COMPlayer {
+    
+    Random R =  new Random();
+    int lastMove = 0;
+    
+    public int play(){
+        lastMove = R.nextInt(3)+1;
+        return lastMove;
+    }
+    
+    public String getLastMove(){
+        
+        if (lastMove == 0){  
+        }else if (lastMove == 1){
+            return ("ROCK");
+        }else if (lastMove == 2){
+            return ("PAPER");
+        }else if (lastMove == 3){
+            return ("SCISSORS");
+        }return "";
+        
+    }
+    
+}
