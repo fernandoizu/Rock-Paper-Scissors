@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+class HUMPlayer {
+    
+    Scanner SC = new Scanner(System.in);
+    int move =  0;
+    
+    public int play(){
+        System.out.println("Choose: Rock(R), Paper(P) or Scissors(S)?");
+        String choice = SC.next();
+        setMove(choice);
+        return move;    
+    }
+
+    private void setMove(String choice) {
+        
+        switch (choice) {
+            case "R":
+                move = 1;
+                break;
+            case "P":
+                move = 2;
+                break;
+            case "S":
+                move = 3;
+                break;
+        }
+    }
+
+    String getLastMove() {
+       
+        String text = "";
+        
+        if (move == 1){
+            text = "ROCK";
+        }else if (move == 2){
+            text = "PAPER";
+        }else if (move ==3){
+            text = "SCISSORS";
+        }
+        return text;
+        
+    }
+        
+    }
+    
